@@ -50,7 +50,7 @@ public class MainFragment extends BaseFragment {
     }
 
     private void showTopics() {
-        int[] res = new int[] {android.R.drawable.ic_delete};
+        int[] res = new int[] {R.drawable.ic_link};
         Random random = new Random();
         for (int i = 0; i < 20; i++) {
             topics.add(new Topic(res[random.nextInt(res.length)], "Topic " + i));

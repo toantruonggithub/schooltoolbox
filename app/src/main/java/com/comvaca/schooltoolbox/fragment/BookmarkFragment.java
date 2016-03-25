@@ -1,5 +1,7 @@
 package com.comvaca.schooltoolbox.fragment;
 
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +52,9 @@ public class BookmarkFragment extends BaseFragment {
     }
 
     private void showTopics() {
-        int[] res = new int[] {android.R.drawable.ic_delete};
+        int[] res = new int[] {R.drawable.ic_link};
+        Drawable drawable = getActivity().getResources().getDrawable(R.drawable.ic_link);
+        drawable.setColorFilter(0xffff0000, PorterDuff.Mode.MULTIPLY);
         Random random = new Random();
         for (int i = 0; i < 10; i++) {
             topics.add(new Topic(res[random.nextInt(res.length)], "Topic " + i));
