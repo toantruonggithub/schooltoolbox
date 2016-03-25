@@ -1,14 +1,13 @@
 package com.comvaca.schooltoolbox.activity;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 
 import com.comvaca.schooltoolbox.R;
 import com.comvaca.schooltoolbox.adpaters.TabsAdapter;
-import com.comvaca.schooltoolbox.fragment.FragmentA;
-import com.comvaca.schooltoolbox.fragment.FragmentB;
+import com.comvaca.schooltoolbox.fragment.BookmarkFragment;
+import com.comvaca.schooltoolbox.fragment.MainFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -30,8 +29,8 @@ public class MainActivity extends BaseActivity {
 
   private void setupViewPager(ViewPager viewPager) {
     adapter = new TabsAdapter(getSupportFragmentManager());
-    adapter.addFrag(new FragmentA(), "Bookmark");
-    adapter.addFrag(new FragmentB(), "All");
+    adapter.addFrag(new BookmarkFragment(), "Bookmark");
+    adapter.addFrag(new MainFragment(), "All");
     viewPager.setAdapter(adapter);
   }
 }
